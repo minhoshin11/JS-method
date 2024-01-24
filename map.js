@@ -5,18 +5,14 @@
 
 
 const days = ["Mon" , "Tue" , "Wed" , "Thurs" , "Fri"]
-const 그냥호출 = 인자 => console.log(인자);
-const 요일 = days.map(그냥호출);
+const 그냥호출 = 인자 => console.log(인자); //그냥 요소별로 찍어줌.
+const 맵함수만 = days.map(그냥호출); //요소들을 배열로 묶어서 찍어줌.
+//
 
-const 다른거는 = 인자 => `야호 ${인자}이다!`
-const 다른놈 = days.map(다른거는);
+const 리터럴맵함수 = 인자 => `야호 ${인자}이다!`
+const 다른놈 = days.map(리터럴맵함수); //야호 ""이다! 라는 것이 배열로 나옴.
 console.log(다른놈)
 //결과 : [ '야호 Mon이다!', '야호 Tue이다!', '야호 Wed이다!', '야호 Thurs이다!', '야호 Fri이다!' ]
-// days는 배열 , 맵의함수는 인자 => 인자로 보여주세요~
-// 요일 = days를 맵을 함수를 이용해서 보여주세요.
-//함수는 맵의함수를 넣을게요!
-//이런 식으로 배열에게 함수를 실행할 수 있게 해주는 메소드인거지.
-
 
 const 인덱스는 = days.map((인자 , index) => `#${index + 1} ${인자}`)
 console.log(인덱스는)
